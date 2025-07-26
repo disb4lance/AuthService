@@ -1,4 +1,4 @@
-namespace AuthService.Domain.Entities;
+namespace AuthServiceDomain.Entities;
 
 public class JwtBlacklistItem
 {

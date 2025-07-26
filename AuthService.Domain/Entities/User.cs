@@ -1,16 +1,16 @@
 using System;
 using System.Collections.Generic;
 
-namespace AuthService.Domain.Entities;
+namespace AuthServicesDomain.Entities;
 
-public class User : BaseEntity
+public class User
 {
-    public string Email { get; set; }
-    public string PasswordHash { get; set; } // bcrypt hash
-    public bool IsEmailVerified { get; set; } = false;
+    public Guid Id { get; set; }
+    public string Email { get; set; }        // Уникальный email
+    public string PasswordHash { get; set; } // Хеш пароля (bcrypt)
     public bool IsActive { get; set; } = true;
-    
-    // Навигационные свойства
-    public ICollection<RefreshToken> RefreshTokens { get; set; } = new List<RefreshToken>();
-    public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
+    public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+
+    // Связи
+    public List<RefreshToken> RefreshTokens { get; set; } = new();
 }

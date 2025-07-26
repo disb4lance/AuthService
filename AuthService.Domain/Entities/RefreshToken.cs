@@ -1,13 +1,12 @@
-namespace AuthService.Domain.Entities;
+namespace AuthServiceDomain.Entities;
 
 public class RefreshToken
 {
-    public string TokenId { get; set; } // GUID или JTI
-    public Guid UserId { get; set; }
-    public DateTime ExpiresAt { get; set; }
-    public bool IsRevoked { get; set; } = false;
-    public string DeviceInfo { get; set; } // Например: "Chrome, Windows 10"
-    
-    // Навигационное свойство
+    public string Token { get; set; }      // Уникальный токен
+    public DateTime ExpiresAt { get; set; } // Срок действия
+    public bool IsRevoked { get; set; }    // Отозван ли токен
+    public Guid UserId { get; set; }       // Внешний ключ
+
+    // Связь
     public User User { get; set; }
 }
