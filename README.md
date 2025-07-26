@@ -1,2 +1,2 @@
-# LightPass
-Api-Gateway
+#AuthService
+Сервис авторизации
