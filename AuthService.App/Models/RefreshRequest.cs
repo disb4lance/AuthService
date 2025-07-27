@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 
+namespace AuthService.App.Models;
 public class RefreshRequest
 {
     /// <summary>
