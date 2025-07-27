@@ -1,2 +1,3 @@
 # AuthService
-Сервис авторизации
+Переменные среды:
+export DB_PASSWORD=""
