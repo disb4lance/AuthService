@@ -38,12 +38,6 @@ nuget.exe
 **/TestResults/
 **/artifacts/
 
-## Docker ##
-**/.dockerignore
-**/Dockerfile
-**/docker-compose.yml
-**/docker-compose.*.yml
-
 # Local development
 **/.env
 **/.env.local
