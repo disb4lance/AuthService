@@ -12,9 +12,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-var a = Environment.GetEnvironmentVariable("DB_PASSWORD");
-var connectionString = builder.Configuration.GetConnectionString("PostgreSQL")
-    ?.Replace("{DB_PASSWORD}", Environment.GetEnvironmentVariable("DB_PASSWORD"));
+var connectionString = builder.Configuration.GetConnectionString("PostgreSQL");
     
 builder.Services.AddDbContext<AuthDbContext>(options =>
     options.UseNpgsql(connectionString));
@@ -26,6 +24,7 @@ var app = builder.Build();
 
     app.UseSwagger();
     app.UseSwaggerUI();
+
 
 app.UseHttpsRedirection();
 

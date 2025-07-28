@@ -11,6 +11,4 @@ public class AuthDbContext : DbContext
     // DbSets для всех сущностей
     public DbSet<User> Users => Set<User>();
     public DbSet<RefreshToken> RefreshTokens => Set<RefreshToken>();
-    public DbSet<JwtBlacklistItem> JwtBlacklist => Set<JwtBlacklistItem>();
-
 }
